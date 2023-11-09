@@ -1,7 +1,5 @@
 package com.security.jwt.demo.security;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +28,7 @@ public class JWTCreator {
         object.setSubject(claims.getSubject());
         object.setExpiration(claims.getExpiration());
         object.setIssuedAt(claims.getIssuedAt());        
-        object.setRoles((List)claims.get(ROLES_AUTHORITIES));
+        object.setRoles((List<String>)claims.get(ROLES_AUTHORITIES));
         
         return object;
 
